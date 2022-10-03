@@ -1,0 +1,68 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package taskb;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author moklet
+ */
+public class Task_BuRatih {
+    public static void main(String[] args) {     
+    Scanner input = new Scanner(System.in);
+    
+    int urutan = 1;
+        String ulang = "";
+        System.out.println("Rekomendasi film terbaik berdasarkan genre 2022");
+        System.out.println("------------------------------------------------");
+        do {
+            System.out.print("Masukkan genre film "
+                    + "(Fantasy, Comedy, Horror, Adventure, Action): ");
+            String genre = input.next();
+            //daftar 
+            String a[] = {"Fantastic Beast", "Sonic the Hedgehog 2", "The Adam Project", "Morbius", "Moonfall"};
+            String b[] = {"Baby Blues", "Operation Fortune", "Pinicchio", "Barbarian", "Prey"};
+            String c[] = {"The Privilege", "Scream 5", "Umma", "Halloween Ends", "Firestarter"};
+            String d[] = {"The Lost City", "The Northman", "Into The Wild", "Uncharted", "Jurassic World Dominion"};
+            String e[] = {"Beast", "The Roundup", "Bullet Train", "The Gray Man", "The Ambush"};
+
+            if (genre.equalsIgnoreCase("Fantasy")) {
+                for (String film : a) {
+                    System.out.println("Film terbaik " + urutan + ": " + film);
+                    urutan++;
+                }
+            }
+            if (genre.equalsIgnoreCase("Comedy")) {
+                for (String film1 : b) {
+                    System.out.println("Film terbaik " + urutan + ": " + film1);
+                    urutan++;
+                }
+            }
+            if (genre.equalsIgnoreCase("Horror")) {
+                for (String film2 : c) {
+                    System.out.println("Film terbaik " + urutan + ": " + film2);
+                    urutan++;
+                }
+            }
+            if (genre.equalsIgnoreCase("Adventure")) {
+                for (String film3 : d) {
+                    System.out.println("Film terbaik " + urutan + ": " + film3);
+                    urutan++;
+                }
+            }
+            if (genre.equalsIgnoreCase("Action")) {
+                for (String film4 : e) {
+                    System.out.println("Film terbaik " + urutan + ": " + film4);
+                    urutan++;
+                }
+            }
+            System.out.println("Mau rekomendasi genre lain?");
+            ulang = input.next();
+        } while (ulang.equalsIgnoreCase("Iya"));
+    
+    }
+}
